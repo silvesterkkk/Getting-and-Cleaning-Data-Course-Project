@@ -11,6 +11,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 The zip file containing the source data is located at 
 [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
 
+<<<<<<< HEAD
 The following transformations were applied to the source data:
 
 1. The training and test sets were merged to create one data set.
@@ -22,3 +23,19 @@ The following transformations were applied to the source data:
 	- `Acc`, `Gyro`, `Mag`, `Freq`, `mean`, and `std` were replaced with `Accelerometer`, `Gyroscope`, `Magnitude`, `Frequency`, `Mean`, and `StandardDeviation` respectively.
 	- Replaced (supposedly incorrect as per source's `features_info.txt` file) `BodyBody` with `Body`.
 5. From the data set in step 4, the final data set was created with the average of each variable for each activity and each subject.
+=======
+# Analyze the data set
+
+The R script run_analysis.R can be used to analyze the data set. It retrieves the source data set and shape to prepare the analysis by stepping through the following steps (see the Code book for details, as well as the comments in the script itself):
+
+Download and unzip source data if it doesn't exist.
+Read data.
+Merge the training and the test sets to create one data set.
+Extract only the measurements on the mean and standard deviation for each measurement.
+Use descriptive activity names to name the activities in the data set.
+Appropriately label the data set with descriptive variable names.
+Create a second, independent tidy set with the average of each variable for each activity and each subject.
+Write the data set to the tidy_data.txt file.
+
+This script requires the dplyr & data.table package.
+>>>>>>> 383ef35f721dfb118a18982d478533c232860735
